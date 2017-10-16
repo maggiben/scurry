@@ -13,9 +13,9 @@
     "text"
   ],
   "exclude": [
-    "test/**/*.spec.js",
-    "lib",
-    "src/GoogleApis*.*",
+    "test/**",
+    "lib/**",
+    "dist/**",
     "flow-typed/**"
   ]
 }

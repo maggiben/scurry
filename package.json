@@ -1,0 +1,71 @@
+{
+  "name": "@maggiben/scurry",
+  "version": "1.0.0",
+  "author": {
+    "name": "Benjamin Maggi",
+    "email": "benjaminmaggi@gmail.com",
+    "url": "https://github.com/maggiben"
+  },
+  "description": "Real-Time audio transcode and stream library",
+  "homepage": "https://github.com/maggiben/scurry#readme",
+  "bugs": {
+    "url": "https://github.com/maggiben/scurry/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maggiben/scurry.git"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test npm run test:lint && npm run test:typecheck && npm run test:spec",
+    "test:clean": "rimraf coverage && rimraf .nyc_output",
+    "test:lint": "eslint src test",
+    "test:spec": "cross-env BABEL_ENV=test nyc mocha test/**/*.spec.js",
+    "test:typecheck": "flow check",
+    "pretest": "npm run test:clean",
+    "build": "npm run clean && npm run build:release",
+    "build:clean": "rimraf lib",
+    "build:release": "cross-env BABEL_ENV=production babel src --out-dir lib",
+    "prepare": "npm run build",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "keywords": [
+    "stream",
+    "piped",
+    "streamer",
+    "transcoder",
+    "audio",
+    "real-time"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "flow-runtime": "^0.14.0",
+    "fluent-ffmpeg": "^2.1.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-plugin-flow-runtime": "^0.11.1",
+    "babel-plugin-istanbul": "^4.1.5",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "cross-env": "^5.0.5",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.0.2",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.7.0",
+    "flow-bin": "^0.57.2",
+    "mocha": "^4.0.1",
+    "nyc": "^11.2.1",
+    "rimraf": "^2.6.2",
+    "semantic-release": "^8.2.0",
+    "standard-version": "^4.2.0"
+  }
+}

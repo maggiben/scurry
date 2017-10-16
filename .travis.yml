@@ -1,0 +1,19 @@
+language: node_js
+cache:
+  directories:
+    - ~/.npm
+notifications:
+  email: false
+node_js:
+  - '8'
+before_script:
+  - npm prune
+  - npm flow-runtime
+script:
+  - npm run test
+after_success:
+  - npm run semantic-release
+# Trigger a push build on master
+branches:
+  only:
+    - master
