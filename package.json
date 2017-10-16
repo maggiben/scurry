@@ -1,6 +1,6 @@
 {
   "name": "@maggiben/scurry",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "Benjamin Maggi",
     "email": "benjaminmaggi@gmail.com",
@@ -23,9 +23,10 @@
     "test:spec": "cross-env BABEL_ENV=test nyc mocha test/**/*.spec.js",
     "test:typecheck": "flow check",
     "pretest": "npm run test:clean",
-    "build": "npm run clean && npm run build:release",
+    "build": "npm run build:clean && npm run build:release",
     "build:clean": "rimraf lib",
     "build:release": "cross-env BABEL_ENV=production babel src --out-dir lib",
+    "release": "standard-version --no-verify",
     "prepare": "npm run build",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
