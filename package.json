@@ -30,6 +30,18 @@
     "prepare": "npm run build",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
+  "engines": {
+    "node": ">=8"
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "stream",
     "piped",
