@@ -1,10 +1,13 @@
 # Scurry 
 ---
+
+**Real-Time, Transcode and Stream**
+
 [![Build Status](https://travis-ci.org/maggiben/scurry.svg?branch=master)](https://travis-ci.org/maggiben/scurry)
 [![Dependency Status](https://gemnasium.com/badges/github.com/maggiben/scurry.svg)](https://gemnasium.com/github.com/maggiben/scurry)
 [![Gitter](https://badges.gitter.im/maggiben/scurry.svg)](https://gitter.im/maggiben/scurry?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-**Real-Time, Transcode and Stream**
 [![npm version](https://badge.fury.io/js/%40maggiben%2Fscurry.svg)](https://badge.fury.io/js/%40maggiben%2Fscurry)
+
 ---
 
 ### Bug report

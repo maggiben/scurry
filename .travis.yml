@@ -8,7 +8,8 @@ node_js:
   - '8'
 before_script:
   - npm prune
-  - npm flow-runtime
+  - npm install -g flow-typed
+  - flow-typed install
 script:
   - npm run test
 after_success:
